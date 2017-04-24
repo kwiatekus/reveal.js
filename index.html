@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Design Thinking w praktyce</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -24,8 +24,114 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+
+				<section data-background="assets/design-thinking.png"></section>
+
+				<section data-background="assets/whoamI.png" data-background-transition="fade-in">
+					<span class="fragment" style="margin-right:300px">
+						<ul class="highlight-green">
+							<li>web developer</li>
+							<li>scrum master</li>
+							<li>LEAN</li>
+						</ul>
+					</span>
+					<span class="fragment" style="margin-left:50px">
+						<ul class="highlight-red">
+							<li>UI/UX expert</li>
+						</ul>
+					</span>	
+					<aside class="notes">
+						Kim jest czlowiek z ryba? 
+					</aside>
+				</section>
+
+				<section data-background="#000">
+					<h1>DESIGN THINKING</h1>
+					<img src="assets/complex.png" style="border:0px"></img>
+				</section>
+				<section data-background="#fff">
+					<h1>DESIGN THINKING</h1>
+					<img  width="150%" src="assets/etapy.jpg" style="border:0px"></img>
+				</section>
+
+
+				<section data-background="assets/iteration.png">
+					<h2>Scrum & Design Thinking</h2>
+					<ul>
+						<li>Uzytkownik w centrum</li>
+						<li>Iteracje - szybki feedback</li>
+						<li>Skomplikowane problemy rozbite na male kroki</li>
+						<li>Fail fast (and cheap)</li>
+					</ul>
+				</section>
+
+				<section data-background="assets/T-shape.jpg"></section>
+
+				<section data-background="assets/web-developer.jpg" data-background-transition="fade-in">
+					<img class="fragment" src="assets/designer.jpg"/>
+					<aside class="notes">
+						Po co mi to?
+					</aside>
+				</section>
+
+				<section>
+					<img src="assets/mouse.jpg"/>
+					<img class="fragment" src="assets/toilet.jpg"/>
+					<aside class="notes">
+						Trzeba spojrzec od strony uzytkownika
+					</aside>
+				</section>
+
+				<section data-background-video="assets/useless.mov">
+					<aside class="notes">
+						Trzeba spojrzec od strony uzytkownika
+					</aside>
+				</section>
+
+				<section data-background ="assets/complicatedUI.png">
+					<aside class="notes">
+						Trzeba spojrzec od strony uzytkownika
+					</aside>
+				</section>
+
+				<section data-background="assets/angry-user.gif">
+					<aside class="notes">
+						Czy czuliscie sie kiedys tak?
+					</aside>
+				</section>
+				
+				<section>Jak to mozliwe?</section>
+
+				<section> 
+					<img src="assets/waterfall.png" style="border:0px" width="1100px" ></img>
+					<aside class="notes">
+						kontrakt
+						 - czego potrzebuje biznes
+						 - jak uzytkownik to rozgryzie
+						 - developer jest na koncu lancucha pokarmowego - ma przerąbane
+					</aside>
+				</section>
+
+				<section data-background="assets/spec.png">
+					<h2>"Dokumentacja"</h2>
+					<ul>
+						<li>Szablony</li>
+						<li>Szkielety</li>
+						<li>Sz..pecifikacje</li>
+					</ul>
+					<aside class="notes">
+						Zaleznosci
+					</aside>
+				</section>
+
+				<section data-background="assets/diverge.jpg">
+					<h1 style="color:black; background-color:white">ROZBIEZNOSCI</h1>
+					<aside class="notes">
+						specyfikacja dobrze wyglada na papierze.
+						papier wszystko przyjmie
+					</aside>
+				</section>
+
 			</div>
 		</div>
 
@@ -35,16 +141,25 @@
 		<script>
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
+				controls: true,
+				progress: true,
 				history: true,
+				center: true,
+
+				transition: 'fade-in', // none/fade/slide/convex/concave/zoom
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
+
+			
 		</script>
 	</body>
 </html>
